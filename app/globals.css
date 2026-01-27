@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ajustes globales */
+html, body {
+  @apply antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+/* Títulos de sección */
+.section-title {
+  font-weight: 600; /* equivalente a font-semibold */
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+td {
+  padding: 0.5rem 1rem;
+}
+
+/* Botones principales */
+.btn-primary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
