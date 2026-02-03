@@ -30,7 +30,7 @@ export default function MesNav() {
           {meses.map((mes) => (
             <a
               key={mes.nombre}
-              href={mes.activo ? mes.ruta ?? undefined}
+              href={mes.activo ? (mes.ruta ?? undefined) : undefined}
               onClick={(e) => { if (!mes.activo) e.preventDefault(); }}
               style={{
                 display: "block",
