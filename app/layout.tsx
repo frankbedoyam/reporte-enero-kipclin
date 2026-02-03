@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import MesNav from "./components/MesNav";
+import MesNav from "./Components/MesNav";
 
 export const metadata: Metadata = {
   title: "Reporte Kipclin",
