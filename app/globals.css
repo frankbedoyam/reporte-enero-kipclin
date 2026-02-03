@@ -11,21 +11,19 @@ html, body {
 
 /* Títulos de sección */
 .section-title {
-  font-weight: 600; /* equivalente a font-semibold */
+  font-weight: 600;
 }
 
-/* Tablas */
-table {
+/* Tablas — solo aplican dentro de .table-default para no pisar los estilos inline del reporte */
+.table-default table {
   width: 100%;
   border-collapse: collapse;
 }
-
-th {
+.table-default th {
   padding: 0.5rem 1rem;
   text-align: left;
 }
-
-td {
+.table-default td {
   padding: 0.5rem 1rem;
 }
 
