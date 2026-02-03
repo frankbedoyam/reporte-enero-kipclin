@@ -34,7 +34,7 @@ const data: ReportItem[] = [
   // MAILING
   { fecha: "13 de enero", tema: "MAILING", actividad: "Limpieza vs vista",  resultado: "Mailchimp enviado", kpi: "14 aperturas" },
   { fecha: "21 de enero", tema: "MAILING", actividad: "Hoteles pierden $", resultado: "Mailchimp enviado", kpi: "11 aperturas" },
-{ fecha: "29 de enero", tema: "MAILING", actividad: "Propuesta de cambio de estructura del mailing", kpi: "Enviado y esperando ajustes y correcciones" },
+  { fecha: "29 de enero", tema: "MAILING", actividad: "Propuesta de cambio de estructura del mailing", resultado: "Mailchimp enviado", kpi: "Enviado y esperando ajustes y correcciones" },
 
 
   // REUNIONES
