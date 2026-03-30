@@ -4,7 +4,7 @@ export default function MesNav() {
   const meses = [
     { nombre: "Enero",      ruta: "/",     activo: true  },
     { nombre: "Febrero",    ruta: "/febrero",    activo: true  },
-    { nombre: "Marzo",      ruta: null,    activo: false },
+    { nombre: "Marzo",      ruta: "/marzo",    activo: true },
     { nombre: "Abril",      ruta: null,    activo: false },
     { nombre: "Mayo",       ruta: null,    activo: false },
     { nombre: "Junio",      ruta: null,    activo: false },
