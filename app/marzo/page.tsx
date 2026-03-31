@@ -95,12 +95,12 @@ function Section({
       src={imagen}
       alt={title}
       width={1299}   // ancho real del archivo
-      height={200}   // alto real del archivo
-      style={{ borderRadius: "8px", objectFit: "contain" }}
+      height={446}   // alto real del archivo (ejemplo real)
+      sizes="(max-width: 768px) 100vw, 1299px" // 👈 responsive: en móvil ocupa todo el ancho
+      style={{ borderRadius: "8px", height: "auto", width: "100%", objectFit: "contain" }}
     />
   </div>
 )}
-
       <div
         style={{
           border: "1px solid #ddd",
