@@ -52,8 +52,8 @@ const data: ReportItem[] = [
 
 // ─── Secciones ────────────────────────────────────────────────
 const secciones = [
-  { tema: "SITE HEALTH", title: "SITE HEALTH", emoji: "🔧", imagen: "/marzo/sitehealth.jpg" },
-  { tema: "BLOG", title: "BLOG", emoji: "📝", imagen: "/marzo/huerfanas.jpg" },
+  { tema: "SITE HEALTH", title: "SITE HEALTH", emoji: "🔧", imagen: "/marzo/sitehealth.png" },
+  { tema: "BLOG", title: "BLOG", emoji: "📝", imagen: "/marzo/huerfanas.png" },
   { tema: "DESCRIPCIONES DE PRODUCTOS", title: "DESCRIPCIONES", emoji: "🔍", imagen: "/marzo/descripciones.jpg" },
   { tema: "MAILING", title: "MAILING", emoji: "📨", imagen: "/marzo/marketingautomation.jpg" },
   { tema: "REUNIONES", title: "REUNIONES", emoji: "🤝", imagen: "/marzo/reuniones.jpg" },
@@ -90,16 +90,15 @@ function Section({
 
       {/* Imagen por sección */}
       {imagen && (
-        <div style={{ textAlign: "center", margin: "16px 0" }}>
-          <Image
-            src={imagen}
-            alt={title}
-            width={600}
-            height={300}
-            style={{ borderRadius: "8px" }}
-          />
-        </div>
-      )}
+  <div style={{ position: "relative", width: "100%", height: "auto", margin: "16px 0" }}>
+    <Image
+      src={imagen}
+      alt={title}
+      fill
+      style={{ objectFit: "contain", borderRadius: "8px" }}
+    />
+  </div>
+)}
 
       <div
         style={{
