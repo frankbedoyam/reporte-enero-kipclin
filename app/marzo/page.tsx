@@ -171,14 +171,15 @@ export default function Page() {
         </div>
 
         {/* Secciones */}
-        {secciones.map((s) => (
-          <Section
-            key={s.tema}
-            title={s.title}
-            emoji={s.emoji}
-            items={data.filter((d) => d.tema === s.tema)}
-          />
-        ))}
+         {secciones.map((s) => (
+           <Section
+          key={s.tema}
+          title={s.title}
+          emoji={s.emoji}
+          imagen={s.imagen}   // 👈 aquí pasas la imagen
+          items={data.filter((d) => d.tema === s.tema)}
+        />
+      ))}
 
         {/* Botón PDF */}
         <button
