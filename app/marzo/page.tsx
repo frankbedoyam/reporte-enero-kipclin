@@ -90,12 +90,13 @@ function Section({
 
       {/* Imagen por sección */}
       {imagen && (
-  <div style={{ position: "relative", width: "100%", height: "auto", margin: "16px 0" }}>
+  <div style={{ textAlign: "center", margin: "16px 0" }}>
     <Image
       src={imagen}
       alt={title}
-      fill
-      style={{ objectFit: "contain", borderRadius: "8px" }}
+      width={1299}   // ancho real del archivo
+      height={200}   // alto real del archivo
+      style={{ borderRadius: "8px", objectFit: "contain" }}
     />
   </div>
 )}
