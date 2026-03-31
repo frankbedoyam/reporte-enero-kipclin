@@ -61,7 +61,17 @@ const secciones = [
 ];
 
 // ─── Componente tabla ─────────────────────────────────────────
-function Section({ title, emoji, items }: { title: string; emoji: string; items: ReportItem[] }) {
+function Section({
+  title,
+  emoji,
+  items,
+  imagen,
+}: {
+  title: string;
+  emoji: string;
+  items: ReportItem[];
+  imagen?: string;
+}) {
   return (
     <section className="mb-10 font-sans">
       <h2
@@ -78,8 +88,26 @@ function Section({ title, emoji, items }: { title: string; emoji: string; items:
         {emoji} {title}
       </h2>
 
+      {/* Imagen por sección */}
+      {imagen && (
+        <div style={{ textAlign: "center", margin: "16px 0" }}>
+          <Image
+            src={imagen}
+            alt={title}
+            width={600}
+            height={300}
+            style={{ borderRadius: "8px" }}
+          />
+        </div>
+      )}
 
-      <div style={{ border: "1px solid #ddd", borderRadius: "0 0 6px 6px", boxShadow: "0 2px 4px rgba(0,0,0,0.05)" }}>
+      <div
+        style={{
+          border: "1px solid #ddd",
+          borderRadius: "0 0 6px 6px",
+          boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
+        }}
+      >
         <table style={{ width: "100%", borderCollapse: "collapse" }}>
           <thead>
             <tr style={{ backgroundColor: "#0056A6", color: "white" }}>
@@ -104,7 +132,6 @@ function Section({ title, emoji, items }: { title: string; emoji: string; items:
     </section>
   );
 }
-
 // ─── Página ───────────────────────────────────────────────────
 export default function Page() {
   const exportPDF = () => {
