@@ -52,12 +52,12 @@ const data: ReportItem[] = [
 
 // ─── Secciones ────────────────────────────────────────────────
 const secciones = [
-  { tema: "SITE HEALTH",   title: "SITE HEALTH", emoji: "🔧", <Image src="/marzo/sitehealth.jpg" alt="Site Health" width={1299} height={446} /> },
-  { tema: "BLOG",          title: "BLOG", emoji: "📝", <Image src="/marzo/huerfanas.jpg" alt="Huerfanas" width={1299} height={446} /> },
-  { tema: "DESCRIPCIONES DE PRODUCTOS",  title: "DESCRIPCIONES",                                      emoji: "🔍" },
-   { tema: "MAILING",       title: "MAILING", emoji: "📨", <Image src="/marzo/marketingautomation.jpg" alt="Marketing Automation" width={1024} height={200} /> },
-  { tema: "REUNIONES",     title: "REUNIONES",                                           emoji: "🤝" },
-  { tema: "REPORTE",       title: "REPORTE",                                             emoji: "📑" },
+  { tema: "SITE HEALTH", title: "SITE HEALTH", emoji: "🔧", imagen: "/marzo/sitehealth.jpg" },
+  { tema: "BLOG", title: "BLOG", emoji: "📝", imagen: "/marzo/huerfanas.jpg" },
+  { tema: "DESCRIPCIONES DE PRODUCTOS", title: "DESCRIPCIONES", emoji: "🔍", imagen: "/marzo/descripciones.jpg" },
+  { tema: "MAILING", title: "MAILING", emoji: "📨", imagen: "/marzo/marketingautomation.jpg" },
+  { tema: "REUNIONES", title: "REUNIONES", emoji: "🤝", imagen: "/marzo/reuniones.jpg" },
+  { tema: "REPORTE", title: "REPORTE", emoji: "📑", imagen: "/marzo/reporte.jpg" },
 ];
 
 // ─── Componente tabla ─────────────────────────────────────────
