@@ -54,7 +54,7 @@ const data: ReportItem[] = [
 const secciones = [
   { tema: "SITE HEALTH", title: "SITE HEALTH", emoji: "🔧", imagen: "/marzo/sitehealth.png" },
   { tema: "BLOG", title: "BLOG", emoji: "📝", imagen: "/marzo/huerfanas.png" },
-  { tema: "DESCRIPCIONES DE PRODUCTOS", title: "DESCRIPCIONES", emoji: "🔍", imagen: "/marzo/descripciones.jpg" },
+  { tema: "DESCRIPCIONES DE PRODUCTOS", title: "DESCRIPCIONES", emoji: "🔍", imagen: "/marzo/descripciones.png" },
   { tema: "MAILING", title: "MAILING", emoji: "📨", imagen: "/marzo/marketingautomation.jpg" },
   { tema: "REUNIONES", title: "REUNIONES", emoji: "🤝", imagen: "/marzo/reuniones.jpg" },
   { tema: "REPORTE", title: "REPORTE", emoji: "📑", imagen: "/marzo/reporte.jpg" },
