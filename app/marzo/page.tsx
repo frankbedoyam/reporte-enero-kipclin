@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
 
@@ -14,52 +15,62 @@ type ReportItem = {
 // ─── Datos ────────────────────────────────────────────────────
 const data: ReportItem[] = [
   // SITE HEALTH
-  { fecha: "5 de marzo",   tema: "SITE HEALTH", actividad: "Análisis con Ahrefs gratuito", resultado: "Reporte de páginas huérfanas", kpi: "Completado" },
-  { fecha: "11 de marzo",      tema: "SITE HEALTH", actividad: "Análisis con Sitebulb gratuito", resultado: "Corrección de errores ",  kpi: "mejorar la salud del sitio" },
-  { fecha: "19 de marzo", tema: "SITE HEALTH", actividad: "Configuración Ahrefs pago",   resultado: "Configuración de nueva plataforma", kpi: "Completado" },
-  { fecha: "19 de marzo",      tema: "SITE HEALTH", actividad: "Crawling de la totalidad del sitio",  resultado: "Rastreo total del sitio para identificar prioridades",kpi: "7.461 páginas analizadas " },
-{ fecha: "20 al 24 de marzo",      tema: "SITE HEALTH", actividad: "Correcciones de link rotos, errores 404 y canonicals",  resultado: "Sitio más saludable",kpi: "98% indicador de site health " },
-{ fecha: "25 de marzo",      tema: "SITE HEALTH", actividad: "Nuevo crawling para lograr calificación de 99",  resultado: "Sitio más saludable",kpi: "99% indicador de site health " },
+  { fecha: "5 de marzo",        tema: "SITE HEALTH", actividad: "Análisis con Ahrefs gratuito", resultado: "Reporte de páginas huérfanas", kpi: "Completado" },
+  { fecha: "11 de marzo",       tema: "SITE HEALTH", actividad: "Análisis con Sitebulb gratuito", resultado: "Corrección de errores", kpi: "Mejorar la salud del sitio" },
+  { fecha: "19 de marzo",       tema: "SITE HEALTH", actividad: "Configuración Ahrefs pago", resultado: "Configuración de nueva plataforma", kpi: "Completado" },
+  { fecha: "19 de marzo",       tema: "SITE HEALTH", actividad: "Crawling de la totalidad del sitio", resultado: "Rastreo total del sitio para identificar prioridades", kpi: "7.461 páginas analizadas" },
+  { fecha: "20 al 24 de marzo", tema: "SITE HEALTH", actividad: "Correcciones de links rotos, errores 404 y canonicals", resultado: "Sitio más saludable", kpi: "98% indicador de site health" },
+  { fecha: "25 de marzo",       tema: "SITE HEALTH", actividad: "Nuevo crawling para lograr calificación de 99", resultado: "Sitio más saludable", kpi: "99% indicador de site health" },
 
   // BLOG
-  { fecha: "1 al 15 de marzo", tema: "BLOG", actividad: "Se han corregido 110 artículos del Blog, que ya tienen keywords, fotos con alt óptimo, módulo que conduce a compras y links internos.", resultado: "110 artículos corregidos", kpi: "proyección en elevar el índice de Autoridad de 4 a 12 semanas" },
-  { fecha: "26 de marzo", tema: "BLOG", actividad: "Publicado el artículo: Cómo transformar el presupuesto de Asamblea", resultado: "Artículo publicado", kpi: "107 hits" },
-  
-  // DESCRIPCIONES DE PRODUCTOS
-  { fecha: "11 al 18 de marzo", tema: "DESCRIPCIONES DE PRODUCTOS", actividad: "Agregar Descripciones a productos que no las tenían ", resultado: "Todos los productos de Kipclin.com tienen descripciones ahora", kpi: "Mejora en SEO para ecommerce de 4 a 12 semanas" },
+  { fecha: "1 al 15 de marzo", tema: "BLOG", actividad: "Se han corregido 110 artículos del Blog, que ya tienen keywords, fotos con alt óptimo, módulo que conduce a compras y links internos.", resultado: "110 artículos corregidos", kpi: "Proyección en elevar el índice de Autoridad de 4 a 12 semanas" },
+  { fecha: "26 de marzo",      tema: "BLOG", actividad: "Publicado el artículo: Cómo transformar el presupuesto de Asamblea", resultado: "Artículo publicado", kpi: "107 hits" },
 
-    // MAILING
-  { fecha: "20 de marzo",  tema: "MAILING", actividad: "Cancelar Mailchimp", resultado: "Cierre de plataforma", kpi: "N/A" },
-  { fecha: "23 al 27 de marzo",  tema: "MAILING", actividad: "Configurar plataforma Zoho para nuevas campañas de Copropiedades y Refill",     resultado: "Nueva plataforma de envíos y automatización", kpi: "Plataforma configurada" },
-  
+  // DESCRIPCIONES DE PRODUCTOS
+  { fecha: "11 al 18 de marzo", tema: "DESCRIPCIONES DE PRODUCTOS", actividad: "Agregar descripciones a productos que no las tenían", resultado: "Todos los productos de Kipclin.com tienen descripciones ahora", kpi: "Mejora en SEO para ecommerce de 4 a 12 semanas" },
+
+  // MAILING
+  { fecha: "20 de marzo",       tema: "MAILING", actividad: "Cancelar Mailchimp", resultado: "Cierre de plataforma", kpi: "N/A" },
+  { fecha: "23 al 27 de marzo", tema: "MAILING", actividad: "Configurar plataforma Zoho para nuevas campañas de Copropiedades y Refill", resultado: "Nueva plataforma de envíos y automatización", kpi: "Plataforma configurada" },
 
   // REUNIONES
-  { fecha: "4 de marzo",  tema: "REUNIONES", actividad: "Seguimiento con María y Sara 6:30 am", resultado: "Reuniones semanales",kpi: "Cumplida" },
-  { fecha: "10 de marzo", tema: "REUNIONES", actividad: "Reunión con Hubspot ajustes a la cotización",     resultado: "Reunión entre Mateo y Frank", kpi: "Cumplida" },
+  { fecha: "4 de marzo",  tema: "REUNIONES", actividad: "Seguimiento con María y Sara 6:30 am", resultado: "Reuniones semanales", kpi: "Cumplida" },
+  { fecha: "10 de marzo", tema: "REUNIONES", actividad: "Reunión con Hubspot ajustes a la cotización", resultado: "Reunión entre Mateo y Frank", kpi: "Cumplida" },
   { fecha: "11 de marzo", tema: "REUNIONES", actividad: "Seguimiento con María 5:30 am", resultado: "Reuniones semanales", kpi: "Cumplida" },
   { fecha: "11 de marzo", tema: "REUNIONES", actividad: "Reunión técnica con Tita y Jose 8 am", resultado: "Seguimiento a temas técnicos", kpi: "Cumplida" },
-  { fecha: "12 de marzo", tema: "REUNIONES", actividad: "Reunión con Martín Moreno de Process Automation", resultado: "Introducción para identificar necesidades de Kipclin entre Martín y Frank",  kpi: "Cumplida" },
-  { fecha: "18 de marzo", tema: "REUNIONES", actividad: "Seguimiento con María 5:30 am",resultado: "Reuniones semanales",kpi: "Cumplida" },
-  { fecha: "16 de marzo", tema: "REUNIONES", actividad: "Reunión sobre necesidades de Kipclin en Marketing",  resultado: "Reunión entre Tita, Daniel y Frank",  kpi: "Cumplida" },
-  { fecha: "20 de marzo", tema: "REUNIONES", actividad: "Zoho presenta Marketing Automation", resultado: "Reunión de Zoho con Tita, Miguel y Frank",  kpi: "Cumplida" },
+  { fecha: "12 de marzo", tema: "REUNIONES", actividad: "Reunión con Martín Moreno de Process Automation", resultado: "Introducción para identificar necesidades de Kipclin entre Martín y Frank", kpi: "Cumplida" },
+  { fecha: "16 de marzo", tema: "REUNIONES", actividad: "Reunión sobre necesidades de Kipclin en Marketing", resultado: "Reunión entre Tita, Daniel y Frank", kpi: "Cumplida" },
+  { fecha: "18 de marzo", tema: "REUNIONES", actividad: "Seguimiento con María 5:30 am", resultado: "Reuniones semanales", kpi: "Cumplida" },
+  { fecha: "20 de marzo", tema: "REUNIONES", actividad: "Zoho presenta Marketing Automation", resultado: "Reunión de Zoho con Tita, Miguel y Frank", kpi: "Cumplida" },
   { fecha: "25 de marzo", tema: "REUNIONES", actividad: "Reunión técnica con Tita y Jose 8 am", resultado: "Seguimiento a temas técnicos", kpi: "Cumplida" },
- 
+
   // REPORTE
   { fecha: "30 de marzo", tema: "REPORTE", actividad: "Generación reporte", resultado: "Seguimiento a actividades", kpi: "Completado" },
 ];
 
 // ─── Secciones ────────────────────────────────────────────────
+// ✅ imagen como string, no como JSX dentro del objeto
 const secciones = [
-  { tema: "SITE HEALTH",   title: "SITE HEALTH", emoji: "🔧", <Image src="/marzo/sitehealth.jpg" alt="Site Health" width={1299} height={446} /> },
-  { tema: "BLOG",          title: "BLOG", emoji: "📝", <Image src="/marzo/huerfanas.jpg" alt="Huerfanas" width={1299} height={446} /> },
-  { tema: "DESCRIPCIONES DE PRODUCTOS",  title: "DESCRIPCIONES",                                      emoji: "🔍" },
-   { tema: "MAILING",       title: "MAILING", emoji: "📨", <Image src="/marzo/marketingautomation.jpg" alt="Marketing Automation" width={1024} height={200} /> },
-  { tema: "REUNIONES",     title: "REUNIONES",                                           emoji: "🤝" },
-  { tema: "REPORTE",       title: "REPORTE",                                             emoji: "📑" },
+  { tema: "SITE HEALTH",                title: "SITE HEALTH",   emoji: "🔧", imagen: "/marzo/sitehealth.jpg" },
+  { tema: "BLOG",                       title: "BLOG",          emoji: "📝", imagen: "/marzo/huerfanas.jpg" },
+  { tema: "DESCRIPCIONES DE PRODUCTOS", title: "DESCRIPCIONES", emoji: "🔍", imagen: undefined },
+  { tema: "MAILING",                    title: "MAILING",       emoji: "📨", imagen: "/marzo/marketingautomation.jpg" },
+  { tema: "REUNIONES",                  title: "REUNIONES",     emoji: "🤝", imagen: undefined },
+  { tema: "REPORTE",                    title: "REPORTE",       emoji: "📑", imagen: undefined },
 ];
 
 // ─── Componente tabla ─────────────────────────────────────────
-function Section({ title, emoji, items }: { title: string; emoji: string; items: ReportItem[] }) {
+function Section({
+  title,
+  emoji,
+  items,
+  imagen,
+}: {
+  title: string;
+  emoji: string;
+  items: ReportItem[];
+  imagen?: string;
+}) {
   return (
     <section className="mb-10 font-sans">
       <h2
@@ -76,6 +87,18 @@ function Section({ title, emoji, items }: { title: string; emoji: string; items:
         {emoji} {title}
       </h2>
 
+      {imagen && (
+        <div style={{ textAlign: "center", margin: "16px 0" }}>
+          <Image
+            src={imagen}
+            alt={title}
+            width={1299}
+            height={446}
+            sizes="(max-width: 768px) 100vw, 1299px"
+            style={{ borderRadius: "8px", height: "auto", width: "100%", objectFit: "contain" }}
+          />
+        </div>
+      )}
 
       <div style={{ border: "1px solid #ddd", borderRadius: "0 0 6px 6px", boxShadow: "0 2px 4px rgba(0,0,0,0.05)" }}>
         <table style={{ width: "100%", borderCollapse: "collapse" }}>
@@ -102,17 +125,16 @@ function Section({ title, emoji, items }: { title: string; emoji: string; items:
     </section>
   );
 }
+
 // ─── Página ───────────────────────────────────────────────────
 export default function Page() {
   const exportPDF = () => {
     const doc = new jsPDF();
     doc.text("Reporte Marzo 2026 – Kipclin", 14, 10);
-
     autoTable(doc, {
       head: [["Fecha", "Tema General", "Actividad", "Resultado/Observación", "KPI"]],
       body: data.map((item) => [item.fecha, item.tema, item.actividad, item.resultado, item.kpi]),
     });
-
     doc.save("Reporte_Marzo_2026_Kipclin.pdf");
   };
 
@@ -146,6 +168,7 @@ export default function Page() {
             key={s.tema}
             title={s.title}
             emoji={s.emoji}
+            imagen={s.imagen}
             items={data.filter((d) => d.tema === s.tema)}
           />
         ))}
