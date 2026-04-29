@@ -4,16 +4,16 @@ export default function MesNav() {
   const meses = [
     { nombre: "Enero",      ruta: "/",     activo: true  },
     { nombre: "Febrero",    ruta: "/febrero",    activo: true  },
-    { nombre: "Marzo",      ruta: null,    activo: false },
-    { nombre: "Abril",      ruta: null,    activo: false },
-    { nombre: "Mayo",       ruta: null,    activo: false },
-    { nombre: "Junio",      ruta: null,    activo: false },
-    { nombre: "Julio",      ruta: null,    activo: false },
-    { nombre: "Agosto",     ruta: null,    activo: false },
-    { nombre: "Septiembre", ruta: null,    activo: false },
-    { nombre: "Octubre",    ruta: null,    activo: false },
-    { nombre: "Noviembre",  ruta: null,    activo: false },
-    { nombre: "Diciembre",  ruta: null,    activo: false },
+    { nombre: "Marzo",      ruta: "/marzo",    activo: true },
+    { nombre: "Abril",      ruta: "/abril",    activo: true },
+    { nombre: "Mayo",       ruta: "/mayo",    activo: false },
+    { nombre: "Junio",      ruta: "/junio",    activo: false },
+    { nombre: "Julio",      ruta: "/julio",    activo: false },
+    { nombre: "Agosto",     ruta: "/agosto",    activo: false },
+    { nombre: "Septiembre", ruta: "/septiembre",    activo: false },
+    { nombre: "Octubre",    ruta: "/octubre",    activo: false },
+    { nombre: "Noviembre",  ruta: "/noviembre",    activo: false },
+    { nombre: "Diciembre",  ruta: "/diciembre",    activo: false },
   ];
 
   return (
