@@ -102,7 +102,6 @@ function Section({ title, emoji, items }: { title: string; emoji: string; items:
     </section>
   );
 }
-
 // ─── Página ───────────────────────────────────────────────────
 export default function Page() {
   const exportPDF = () => {

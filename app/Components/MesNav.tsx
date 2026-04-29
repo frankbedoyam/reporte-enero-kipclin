@@ -6,7 +6,7 @@ export default function MesNav() {
     { nombre: "Febrero",    ruta: "/febrero",    activo: true  },
     { nombre: "Marzo",      ruta: "/marzo",    activo: true },
     { nombre: "Abril",      ruta: "/abril",    activo: true },
-    { nombre: "Mayo",       ruta: "/mayo",    activo: false },
+    { nombre: "Mayo",       ruta: "/mayo",    activo: true },
     { nombre: "Junio",      ruta: "/junio",    activo: false },
     { nombre: "Julio",      ruta: "/julio",    activo: false },
     { nombre: "Agosto",     ruta: "/agosto",    activo: false },
