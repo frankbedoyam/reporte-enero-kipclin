@@ -16,48 +16,53 @@ type ReportItem = {
 // ─── Datos ────────────────────────────────────────────────────
 const data: ReportItem[] = [
   // SITE HEALTH
-  { fecha: "5 de marzo",   tema: "SITE HEALTH", actividad: "Análisis con Ahrefs gratuito", resultado: "Reporte de páginas huérfanas", kpi: "Completado" },
-  { fecha: "11 de marzo",      tema: "SITE HEALTH", actividad: "Análisis con Sitebulb gratuito", resultado: "Corrección de errores ",  kpi: "mejorar la salud del sitio" },
-  { fecha: "19 de marzo", tema: "SITE HEALTH", actividad: "Configuración Ahrefs pago",   resultado: "Configuración de nueva plataforma", kpi: "Completado" },
-  { fecha: "19 de marzo",      tema: "SITE HEALTH", actividad: "Crawling de la totalidad del sitio",  resultado: "Rastreo total del sitio para identificar prioridades",kpi: "7.461 páginas analizadas " },
-{ fecha: "20 al 24 de marzo",      tema: "SITE HEALTH", actividad: "Correcciones de link rotos, errores 404 y canonicals",  resultado: "Sitio más saludable",kpi: "98% indicador de site health " },
-{ fecha: "25 de marzo",      tema: "SITE HEALTH", actividad: "Nuevo crawling para lograr calificación de 99",  resultado: "Sitio más saludable",kpi: "99% indicador de site health " },
+  { fecha: "6 de abril", tema: "SITE HEALTH", actividad: "Crawling con Ahrefs pago", resultado: "Reporte de esta plataforma.", kpi: "99% indicador de site health" },
+  { fecha: "6 de abril", tema: "SITE HEALTH", actividad: "211 Metadescripciones demasiado largas", resultado: "Listado en Google Sheets", kpi: "Pendiente corrección" },
+  { fecha: "7 de abril", tema: "SITE HEALTH", actividad: "Corrección 174 errores imagen alt: Blog de Kipclin", resultado: "Correcciones documentadas en Google Sheets", kpi: "Completado" },
+  { fecha: "10 de abril", tema: "SITE HEALTH", actividad: "Optimización páginas lentas según Google", resultado: "Revisión HTML y servidor", kpi: "Pendiente optimización" },
+  { fecha: "13 de abril", tema: "SITE HEALTH", actividad: "Crawling con Ahrefs pago", resultado: "Reporte de esta plataforma.", kpi: "99% indicador de site health" },
+  { fecha: "20 de abril", tema: "SITE HEALTH", actividad: "Crawling con Ahrefs pago", resultado: "Reporte de esta plataforma.", kpi: "99% indicador de site health" },
+  { fecha: "27 de abril", tema: "SITE HEALTH", actividad: "Crawling con Ahrefs pago", resultado: "Reporte de esta plataforma.", kpi: "99% indicador de site health" },
+  { fecha: "27 de abril", tema: "SITE HEALTH", actividad: "Correcciones de errores 404", resultado: "8 errores enviados y corregidos el mismo día", kpi: "99% indicador de site health" },
 
   // BLOG
-  { fecha: "1 al 15 de marzo", tema: "BLOG", actividad: "Se han corregido 110 artículos del Blog, que ya tienen keywords, fotos con alt óptimo, módulo que conduce a compras y links internos.", resultado: "110 artículos corregidos", kpi: "proyección en elevar el índice de Autoridad de 4 a 12 semanas" },
-  { fecha: "26 de marzo", tema: "BLOG", actividad: "Publicado el artículo: Cómo transformar el presupuesto de Asamblea", resultado: "Artículo publicado", kpi: "107 hits" },
-  
-  // DESCRIPCIONES DE PRODUCTOS
-  { fecha: "11 al 18 de marzo", tema: "DESCRIPCIONES DE PRODUCTOS", actividad: "Agregar Descripciones a productos que no las tenían ", resultado: "Todos los productos de Kipclin.com tienen descripciones ahora", kpi: "Mejora en SEO para ecommerce de 4 a 12 semanas" },
+  { fecha: "9 de abril", tema: "BLOG", actividad: "Artículo: Manchas difíciles: la solución que tu ropa estaba esperando", resultado: "Publicado con SEO completo", kpi: "178 visitas" },
+  { fecha: "10 de abril", tema: "BLOG", actividad: "Artículo: Cómo quitar manchas de sudor y desodorante", resultado: "Publicado con SEO completo", kpi: "333 visitas" },
+  { fecha: "13 de abril", tema: "BLOG", actividad: "Artículo: Alcohol Antiséptico vs Alcohol Glicerinado", resultado: "Publicado con SEO completo", kpi: "891 visitas" },
+  { fecha: "14 de abril", tema: "BLOG", actividad: "Artículo: Traperos: tipos, diferencias y cómo elegir", resultado: "Publicado con SEO completo", kpi: "434 visitas" },
+  { fecha: "16 de abril", tema: "BLOG", actividad: "Artículo: Papel higiénico: guía completa", resultado: "Publicado con SEO completo", kpi: "393 visitas" },
+  { fecha: "22 de abril", tema: "BLOG", actividad: "Artículo: Jabón: guía completa sobre tipos y usos", resultado: "Publicado con SEO completo", kpi: "233 visitas" },
+  { fecha: "24 de abril", tema: "BLOG", actividad: "Artículo: Amonio cuaternario de quinta generación", resultado: "Publicado con SEO completo", kpi: "875 visitas" },
+  { fecha: "28 de abril", tema: "BLOG", actividad: "Artículo: Escobas: tipos, usos y cómo elegir", resultado: "Publicado con SEO completo", kpi: "53 visitas" },
 
-    // MAILING
-  { fecha: "20 de marzo",  tema: "MAILING", actividad: "Cancelar Mailchimp", resultado: "Cierre de plataforma", kpi: "N/A" },
-  { fecha: "23 al 27 de marzo",  tema: "MAILING", actividad: "Configurar plataforma Zoho para nuevas campañas de Copropiedades y Refill",     resultado: "Nueva plataforma de envíos y automatización", kpi: "Plataforma configurada" },
-  
+  // DESCRIPCIONES DE PRODUCTOS
+  { fecha: "8 al 22 de abril", tema: "DESCRIPCIONES DE PRODUCTOS", actividad: "Acortar descripciones siguiendo regla SEO 160 caracteres", resultado: "960 productos con descripciones optimizadas", kpi: "Mejora SEO ecommerce" },
+
+  // MAILING
+  { fecha: "1 al 12 de abril", tema: "MAILING", actividad: "Configurar Zoho para campañas de copropiedades y Refill", resultado: "Nueva plataforma de envíos", kpi: "Plataforma configurada" },
+  { fecha: "13 de abril", tema: "MAILING", actividad: "Enviar prueba", resultado: "Prueba realizada en Zoho", kpi: "Completado" },
 
   // REUNIONES
-  { fecha: "4 de marzo",  tema: "REUNIONES", actividad: "Seguimiento con María y Sara 6:30 am", resultado: "Reuniones semanales",kpi: "Cumplida" },
-  { fecha: "10 de marzo", tema: "REUNIONES", actividad: "Reunión con Hubspot ajustes a la cotización",     resultado: "Reunión entre Mateo y Frank", kpi: "Cumplida" },
-  { fecha: "11 de marzo", tema: "REUNIONES", actividad: "Seguimiento con María 5:30 am", resultado: "Reuniones semanales", kpi: "Cumplida" },
-  { fecha: "11 de marzo", tema: "REUNIONES", actividad: "Reunión técnica con Tita y Jose 8 am", resultado: "Seguimiento a temas técnicos", kpi: "Cumplida" },
-  { fecha: "12 de marzo", tema: "REUNIONES", actividad: "Reunión con Martín Moreno de Process Automation", resultado: "Introducción para identificar necesidades de Kipclin entre Martín y Frank",  kpi: "Cumplida" },
-  { fecha: "18 de marzo", tema: "REUNIONES", actividad: "Seguimiento con María 5:30 am",resultado: "Reuniones semanales",kpi: "Cumplida" },
-  { fecha: "16 de marzo", tema: "REUNIONES", actividad: "Reunión sobre necesidades de Kipclin en Marketing",  resultado: "Reunión entre Tita, Daniel y Frank",  kpi: "Cumplida" },
-  { fecha: "20 de marzo", tema: "REUNIONES", actividad: "Zoho presenta Marketing Automation", resultado: "Reunión de Zoho con Tita, Miguel y Frank",  kpi: "Cumplida" },
-  { fecha: "25 de marzo", tema: "REUNIONES", actividad: "Reunión técnica con Tita y Jose 8 am", resultado: "Seguimiento a temas técnicos", kpi: "Cumplida" },
- 
+  { fecha: "1 de abril", tema: "REUNIONES", actividad: "Seguimiento con María Botero 5:30 am", resultado: "Reuniones semanales", kpi: "Cumplida" },
+  { fecha: "8 de abril", tema: "REUNIONES", actividad: "Reunión técnica 8 am (Tita, Miguel y Jose)", resultado: "Reunión técnica", kpi: "Cumplida" },
+  { fecha: "11 de abril", tema: "REUNIONES", actividad: "Seguimiento con María Botero 8 am", resultado: "Reuniones semanales", kpi: "Cumplida" },
+  { fecha: "15 de abril", tema: "REUNIONES", actividad: "Seguimiento con María Botero 5:30 am", resultado: "Reuniones semanales", kpi: "Cumplida" },
+  { fecha: "22 de abril", tema: "REUNIONES", actividad: "Seguimiento con María Botero 5:30 am", resultado: "Reuniones semanales", kpi: "Cumplida" },
+  { fecha: "22 de abril", tema: "REUNIONES", actividad: "Reunión técnica 8 am (Jose, Miguel y Tita)", resultado: "Reunión técnica", kpi: "Cumplida" },
+  { fecha: "29 de abril", tema: "REUNIONES", actividad: "Seguimiento con María Botero 5:30 am", resultado: "Reuniones semanales", kpi: "Cumplida" },
+
   // REPORTE
-  { fecha: "30 de marzo", tema: "REPORTE", actividad: "Generación reporte", resultado: "Seguimiento a actividades", kpi: "Completado" },
+  { fecha: "30 de abril", tema: "REPORTE", actividad: "Generación reporte", resultado: "Seguimiento a actividades", kpi: "Completado" },
 ];
 
 // ─── Secciones ────────────────────────────────────────────────
 const secciones = [
-  { tema: "SITE HEALTH", title: "SITE HEALTH", emoji: "🔧", imagen: "/marzo/sitehealth.png" },
-  { tema: "BLOG", title: "BLOG", emoji: "📝", imagen: "/marzo/huerfanas.png" },
-  { tema: "DESCRIPCIONES DE PRODUCTOS", title: "DESCRIPCIONES", emoji: "🔍", imagen: "/marzo/descripciones.png" },
-  { tema: "MAILING", title: "MAILING", emoji: "📨", imagen: "/marzo/marketingautomation.jpg" },
-  { tema: "REUNIONES", title: "REUNIONES", emoji: "🤝", imagen: "/marzo/reuniones.jpg" },
-  { tema: "REPORTE", title: "REPORTE", emoji: "📑", imagen: "/marzo/reporte.jpg" },
+  { tema: "SITE HEALTH", title: "SITE HEALTH", emoji: "🔧", <Image src="/abril/sitehealth.png" alt="Site Health" width={1299} height={446} /> },
+  { tema: "BLOG", title: "BLOG", emoji: "📝", <Image src="/abril/blog.png" alt="Blog" width={1299} height={446} /> },
+  { tema: "DESCRIPCIONES DE PRODUCTOS", title: "DESCRIPCIONES", emoji: "🔍" },
+  { tema: "MAILING", title: "MAILING", emoji: "📨", <Image src="/abril/mailing.png" alt="Mailing" width={1024} height={200} /> },
+  { tema: "REUNIONES", title: "REUNIONES", emoji: "🤝" },
+  { tema: "REPORTE", title: "REPORTE", emoji: "📑" },
 ];
 
 // ─── Componente tabla ─────────────────────────────────────────
