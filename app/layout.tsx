@@ -3,6 +3,7 @@ import "./globals.css";
 import MesNav from "./Components/MesNav";
 import { Analytics } from "@vercel/analytics/react";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Reporte Kipclin",
@@ -19,6 +20,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Analytics />
         <GoogleAnalytics gaId="G-G2J8HF6GEZ" />
+        <Script
+          id="clarity-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "wjzsp625pv");
+            `,
+          }}
+        />
       </body>
     </html>
   );
