@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@next/third-parties": "^16.2.4",
+    "@vercel/analytics": "^2.0.1",
     "chart.js": "^4.5.1",
     "jspdf": "^4.0.0",
     "jspdf-autotable": "^5.0.7",
