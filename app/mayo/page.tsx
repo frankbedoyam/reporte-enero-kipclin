@@ -49,17 +49,16 @@ const data: ReportItem[] = [
   { fecha: "27 de mayo", tema: "REUNIONES", actividad: "Seguimiento con María Botero 5:30 am", resultado: "Reuniones semanales. Reporte enviado por correo", kpi: "Cumplida" },
 
   // REPORTE
-  { fecha: "29 de mayo", tema: "REPORTE", actividad: "Generación reporte", resultado: "Seguimiento a actividades", kpi: "Completado" },
-];
+  { fecha: "29 de mayo", tema: "REPORTE", actividad: "Generación reporte", resultado: "Seguimiento a actividades", kpi: "Completado" },];
 
 // ─── Secciones ────────────────────────────────────────────────
 const secciones = [
-  { tema: "SEO TÉCNICO",       title: "SEO TÉCNICO",       emoji: "🔧", imagen: "/mayo/sitehealth.png" },
-  { tema: "BLOG",              title: "BLOG",              emoji: "📝", imagen: "/mayo/blog.png" },
-  { tema: "OTRAS ACTIVIDADES", title: "OTRAS ACTIVIDADES", emoji: "⚙️", imagen: undefined },
-  { tema: "DISEÑO",            title: "DISEÑO",            emoji: "🎨", imagen: undefined },
-  { tema: "REUNIONES",         title: "REUNIONES",         emoji: "🤝", imagen: undefined },
-  { tema: "REPORTE",           title: "REPORTE",           emoji: "📑", imagen: undefined },
+  { tema: "SEO TÉCNICO",       title: "SEO TÉCNICO",       emoji: "", imagen: "/mayo/sitehealth.png" },
+  { tema: "BLOG",              title: "BLOG",              emoji: "", imagen: "/mayo/blog.png" },
+  { tema: "OTRAS ACTIVIDADES", title: "OTRAS ACTIVIDADES", emoji: "", imagen: undefined },
+  { tema: "DISEÑO",            title: "DISEÑO",            emoji: "", imagen: undefined },
+  { tema: "REUNIONES",         title: "REUNIONES",         emoji: "", imagen: undefined },
+  { tema: "REPORTE",           title: "REPORTE",           emoji: "", imagen: undefined },
 ];
 
 // ─── Componente de sección ────────────────────────────────────
@@ -157,7 +156,7 @@ export default function Page() {
           }}
         >
           <h1 style={{ fontSize: "28px", fontWeight: "bold", marginBottom: "8px" }}>
-            📊 Reporte Mayo 2026 – Kipclin
+            Reporte Mayo 2026 – Kipclin
           </h1>
           <p style={{ fontSize: "16px", margin: 0 }}>
             Seguimiento técnico, editorial y comercial del sitio web. Incluye actividades SEO, blog, diseño, otras gestiones y reuniones clave.
@@ -191,5 +190,9 @@ export default function Page() {
             marginBottom: "40px",
           }}
         >
-          📥 Descargar PDF
+          Descargar PDF
         </button>
+      </div>
+    </div>
+  );
+}
