@@ -85,50 +85,50 @@ const data: ReportItem[] = [
   {
     fecha: "5 de mayo",
     tema: "BLOG",
-    actividad: "Articulo: Productos de aseo y desinfeccion para veterinarias y peluquerias de mascotas",
-    resultado: "Publicado con imagenes ALT, keywords, links a productos, interlinking, H1, H2",
+    actividad: "Artículo: Productos de aseo y desinfección para veterinarias y peluquerías de mascotas",
+    resultado: "Publicado con imágenes ALT, keywords, links a productos, interlinking, H1, H2",
     kpi: "348 hits",
   },
   {
     fecha: "8 de mayo",
     tema: "BLOG",
-    actividad: "Articulo: Acido peracético: que es, para que sirve y cuando usarlo",
-    resultado: "Publicado con imagenes ALT, keywords, links a productos, interlinking, H1, H2",
+    actividad: "Artículo: Acido peracético: que es, para que sirve y cuando usarlo",
+    resultado: "Publicado con imágenes ALT, keywords, links a productos, interlinking, H1, H2",
     kpi: "364 hits",
   },
   {
     fecha: "12 de mayo",
     tema: "BLOG",
-    actividad: "Articulo: Antibacterial: todo lo que necesitas saber para protegerte",
-    resultado: "Publicado con imagenes ALT, keywords, links a productos, interlinking, H1, H2",
+    actividad: "Artículo: Antibacterial: todo lo que necesitas saber para protegerte",
+    resultado: "Publicado con imágenes ALT, keywords, links a productos, interlinking, H1, H2",
     kpi: "325 hits",
   },
   {
     fecha: "17 de mayo",
     tema: "BLOG",
-    actividad: "Articulo: Suavizante de ropa: todo lo que necesitas saber para usarlo bien",
-    resultado: "Publicado con imagenes ALT, keywords, links a productos, interlinking, H1, H2",
+    actividad: "Artículo: Suavizante de ropa: todo lo que necesitas saber para usarlo bien",
+    resultado: "Publicado con imágenes ALT, keywords, links a productos, interlinking, H1, H2",
     kpi: "413 hits",
   },
   {
     fecha: "18 de mayo",
     tema: "BLOG",
-    actividad: "Articulo: Contaminacion cruzada: que es, tipos y como prevenirla en tu empresa",
-    resultado: "Publicado con imagenes ALT, keywords, links a productos, interlinking, H1, H2",
+    actividad: "Artículo: Contaminación cruzada: que es, tipos y como prevenirla en tu empresa",
+    resultado: "Publicado con imágenes ALT, keywords, links a productos, interlinking, H1, H2",
     kpi: "195 hits",
   },
   {
     fecha: "24 de mayo",
     tema: "BLOG",
-    actividad: "Articulo: Manual de bioseguridad para Pymes",
-    resultado: "Publicado con imagenes ALT, keywords, links a productos, interlinking, H1, H2",
+    actividad: "Artículo: Manual de bioseguridad para Pymes",
+    resultado: "Publicado con imágenes ALT, keywords, links a productos, interlinking, H1, H2",
     kpi: "128 hits",
   },
   {
     fecha: "28 de mayo",
     tema: "BLOG",
-    actividad: "Articulo: Bioseguridad en restaurantes, cafeterias, panaderias y bares",
-    resultado: "Publicado con imagenes ALT, keywords, links a productos, interlinking, H1, H2",
+    actividad: "Artículo: Bioseguridad en restaurantes, cafeterías, panaderías y bares",
+    resultado: "Publicado con imágenes ALT, keywords, links a productos, interlinking, H1, H2",
     kpi: "45 hits",
   },
 
@@ -147,7 +147,7 @@ const data: ReportItem[] = [
     fecha: "14 al 19 de mayo",
     tema: "OTRAS ACTIVIDADES",
     actividad: "Consulta sobre widget flotante multicanal",
-    resultado: "Solucion enviada por correo:",
+    resultado: "Solución enviada por correo:",
     links: [
       { texto: "Ver documento", url: "https://docs.google.com/document/d/1vod-9wQ6wYcSNLvLYYet5KMQRNnn5rCz-GYqU3Vk1Pc/edit?usp=sharing" },
     ],
@@ -165,8 +165,8 @@ const data: ReportItem[] = [
   {
     fecha: "7 de mayo",
     tema: "DISEÑO",
-    actividad: "Reunion para elegir plantillas con Tita",
-    resultado: "Seleccion de plantilla: MegaDeal II de JoomShaper, evolucion de la plantilla actual",
+    actividad: "Reunión para elegir plantillas con Tita",
+    resultado: "Selección de plantilla: MegaDeal II de JoomShaper, evolución de la plantilla actual",
     kpi: "Template seleccionado",
   },
 
@@ -174,7 +174,7 @@ const data: ReportItem[] = [
   {
     fecha: "6 de mayo",
     tema: "REUNIONES",
-    actividad: "Seguimiento con Maria Botero 5:30 am",
+    actividad: "Seguimiento con María Botero 5:30 am",
     resultado: "Reuniones semanales. Reporte enviado por correo:",
     links: [
       { texto: "Ver reporte", url: "https://docs.google.com/document/d/1ugbiQAy0xuDNpHXHaKplHBLjH_vpNj3Xe3cj3kNde7U/edit?usp=sharing" },
@@ -184,14 +184,14 @@ const data: ReportItem[] = [
   {
     fecha: "6 de mayo",
     tema: "REUNIONES",
-    actividad: "Reunion tecnica 8 am (Tita, Miguel y Jose)",
-    resultado: "Reunion tecnica",
+    actividad: "Reunion técnica 8 am (Tita, Miguel y Jose)",
+    resultado: "Reunion técnica",
     kpi: "Cumplida",
   },
   {
     fecha: "13 de mayo",
     tema: "REUNIONES",
-    actividad: "Seguimiento con Maria Botero 5:30 am",
+    actividad: "Seguimiento con María Botero 5:30 am",
     resultado: "Reuniones semanales",
     kpi: "Cumplida",
   },
@@ -208,14 +208,14 @@ const data: ReportItem[] = [
   {
     fecha: "20 de mayo",
     tema: "REUNIONES",
-    actividad: "Reunion tecnica 8 am tras actualizacion de Joomla (Jose, Miguel y Tita)",
-    resultado: "Reunion tecnica",
+    actividad: "Reunion técnica 8 am tras actualizacion de Joomla (Jose, Miguel y Tita)",
+    resultado: "Reunion técnica",
     kpi: "Cumplida",
   },
   {
     fecha: "27 de mayo",
     tema: "REUNIONES",
-    actividad: "Seguimiento con Maria Botero 5:30 am",
+    actividad: "Seguimiento con María Botero 5:30 am",
     resultado: "Reuniones semanales. Reporte enviado por correo:",
     links: [
       { texto: "Ver reporte", url: "https://docs.google.com/document/d/1hCNvRI4T817MKH5D-k8xgQbT1dj28K-TM1cYbgV9EtA/edit?usp=sharing" },
@@ -227,7 +227,7 @@ const data: ReportItem[] = [
   {
     fecha: "29 de mayo",
     tema: "REPORTE",
-    actividad: "Generacion reporte",
+    actividad: "Generación reporte",
     resultado: "Seguimiento a actividades",
     kpi: "Completado",
   },
@@ -235,8 +235,8 @@ const data: ReportItem[] = [
 
 // ─── Secciones ────────────────────────────────────────────────
 const secciones = [
-  { tema: "SEO TÉCNICO",       title: "SEO TÉCNICO",       imagen: "/mayo/sitehealth.png" },
-  { tema: "BLOG",              title: "BLOG",              imagen: "/mayo/blog.png" },
+  { tema: "SEO TÉCNICO",       title: "SEO TÉCNICO",       imagen: "/mayo/31healthscore.png" },
+  { tema: "BLOG",              title: "BLOG",              imagen: "/mayo/articulosMayo.png" },
   { tema: "OTRAS ACTIVIDADES", title: "OTRAS ACTIVIDADES", imagen: undefined },
   { tema: "DISEÑO",            title: "DISEÑO",            imagen: undefined },
   { tema: "REUNIONES",         title: "REUNIONES",         imagen: undefined },
