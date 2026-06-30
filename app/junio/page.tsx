@@ -192,6 +192,41 @@ function ResultadoCell({ resultado, links }: { resultado: string; links?: Link[]
   );
 }
 
+// ─── Tarjeta móvil por fila ───────────────────────────────────
+function RowCard({ row }: { row: ReportItem }) {
+  return (
+    <div style={{
+      border: "1px solid #E5E7EB",
+      borderRadius: "8px",
+      padding: "14px",
+      marginBottom: "12px",
+      backgroundColor: "white",
+      boxShadow: "0 1px 3px rgba(0,0,0,0.07)",
+    }}>
+      <div style={{ fontSize: "12px", color: "#055DA7", fontWeight: "700", marginBottom: "6px", textTransform: "uppercase" }}>
+        {row.fecha}
+      </div>
+      <div style={{ fontSize: "14px", color: "#111827", marginBottom: "8px", lineHeight: "1.5" }}>
+        {row.actividad}
+      </div>
+      <div style={{ fontSize: "13px", color: "#374151", marginBottom: "6px" }}>
+        <ResultadoCell resultado={row.resultado} links={row.links} />
+      </div>
+      <div style={{
+        display: "inline-block",
+        backgroundColor: "#EFF6FF",
+        color: "#1D4ED8",
+        fontSize: "12px",
+        fontWeight: "600",
+        padding: "3px 10px",
+        borderRadius: "20px",
+      }}>
+        {row.kpi}
+      </div>
+    </div>
+  );
+}
+
 // ─── Componente de sección ────────────────────────────────────
 function Section({
   title,
@@ -204,17 +239,15 @@ function Section({
 }) {
   return (
     <section style={{ marginBottom: "32px" }}>
-      <h2
-        style={{
-          backgroundColor: "#20B6EA",
-          color: "white",
-          padding: "10px 16px",
-          borderRadius: "6px 6px 0 0",
-          fontSize: "18px",
-          fontWeight: "bold",
-          margin: 0,
-        }}
-      >
+      <h2 style={{
+        backgroundColor: "#20B6EA",
+        color: "white",
+        padding: "10px 16px",
+        borderRadius: "6px 6px 0 0",
+        fontSize: "18px",
+        fontWeight: "bold",
+        margin: 0,
+      }}>
         {title}
       </h2>
 
@@ -223,12 +256,13 @@ function Section({
           <img
             src={imagen}
             alt={"Imagen " + title}
-            style={{ width: "50%", height: "auto", borderRadius: "6px" }}
+            style={{ width: "60%", height: "auto", borderRadius: "6px", display: "block", margin: "0 auto" }}
           />
         </div>
       )}
 
-      <div style={{ overflowX: "auto" }}>
+      {/* Tabla para desktop */}
+      <div className="hide-on-mobile" style={{ overflowX: "auto" }}>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "14px" }}>
           <thead>
             <tr style={{ backgroundColor: "#055DA7", color: "white" }}>
@@ -251,6 +285,13 @@ function Section({
             ))}
           </tbody>
         </table>
+      </div>
+
+      {/* Tarjetas para móvil */}
+      <div className="hide-on-desktop" style={{ paddingTop: "12px" }}>
+        {items.map((row, i) => (
+          <RowCard key={i} row={row} />
+        ))}
       </div>
     </section>
   );
@@ -275,11 +316,22 @@ export default function Page() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6 font-sans">
-      <div className="max-w-6xl mx-auto">
+    <>
+      <style>{`
+        @media (max-width: 640px) {
+          .hide-on-mobile { display: none !important; }
+          .hide-on-desktop { display: block !important; }
+        }
+        @media (min-width: 641px) {
+          .hide-on-mobile { display: block !important; }
+          .hide-on-desktop { display: none !important; }
+        }
+      `}</style>
 
-        <div
-          style={{
+      <div className="min-h-screen bg-gray-50 p-6 font-sans">
+        <div className="max-w-6xl mx-auto">
+
+          <div style={{
             backgroundColor: "#055DA7",
             padding: "20px",
             borderRadius: "8px",
@@ -287,43 +339,43 @@ export default function Page() {
             marginBottom: "24px",
             boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
             borderBottom: "4px solid #20B6EA",
-          }}
-        >
-          <h1 style={{ fontSize: "28px", fontWeight: "bold", marginBottom: "8px" }}>
-            Reporte Junio 2026 - Kipclin
-          </h1>
-          <p style={{ fontSize: "16px", margin: 0 }}>
-            Seguimiento tecnico, editorial, automatizacion y comercial del sitio web. Incluye actividades SEO, blog, Zoho Marketing Automation y reuniones clave.
-          </p>
+          }}>
+            <h1 style={{ fontSize: "28px", fontWeight: "bold", marginBottom: "8px" }}>
+              Reporte Junio 2026 - Kipclin
+            </h1>
+            <p style={{ fontSize: "16px", margin: 0 }}>
+              Seguimiento tecnico, editorial, automatizacion y comercial del sitio web. Incluye actividades SEO, blog, Zoho Marketing Automation y reuniones clave.
+            </p>
+          </div>
+
+          {secciones.map((s) => (
+            <Section
+              key={s.tema}
+              title={s.title}
+              imagen={s.imagen}
+              items={data.filter((d) => d.tema === s.tema)}
+            />
+          ))}
+
+          <button
+            onClick={exportPDF}
+            style={{
+              backgroundColor: "#055DA7",
+              color: "white",
+              border: "none",
+              padding: "12px 24px",
+              borderRadius: "6px",
+              fontSize: "16px",
+              fontWeight: "bold",
+              cursor: "pointer",
+              marginTop: "20px",
+              marginBottom: "40px",
+            }}
+          >
+            Descargar PDF
+          </button>
         </div>
-
-        {secciones.map((s) => (
-          <Section
-            key={s.tema}
-            title={s.title}
-            imagen={s.imagen}
-            items={data.filter((d) => d.tema === s.tema)}
-          />
-        ))}
-
-        <button
-          onClick={exportPDF}
-          style={{
-            backgroundColor: "#055DA7",
-            color: "white",
-            border: "none",
-            padding: "12px 24px",
-            borderRadius: "6px",
-            fontSize: "16px",
-            fontWeight: "bold",
-            cursor: "pointer",
-            marginTop: "20px",
-            marginBottom: "40px",
-          }}
-        >
-          Descargar PDF
-        </button>
       </div>
-    </div>
+    </>
   );
 }

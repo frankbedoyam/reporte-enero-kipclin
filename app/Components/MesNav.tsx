@@ -1,17 +1,16 @@
 "use client";
-
 export default function MesNav() {
   const meses = [
-    { nombre: "Enero",      ruta: "/",     activo: true  },
-    { nombre: "Febrero",    ruta: "/febrero",    activo: true  },
-    { nombre: "Marzo",      ruta: "/marzo",    activo: true },
-    { nombre: "Abril",      ruta: "/abril",    activo: true },
-    { nombre: "Mayo",       ruta: "/mayo",    activo: true },
-    { nombre: "Junio",      ruta: "/junio",    activo: true },
-    { nombre: "Julio",      ruta: "/julio",    activo: true },
-    { nombre: "Agosto",     ruta: "/agosto",    activo: true },
-    { nombre: "Septiembre", ruta: "/septiembre",    activo: true },
-    { nombre: "Octubre",    ruta: "/octubre",    activo: true },
+    { nombre: "Enero",      ruta: "/",             activo: true },
+    { nombre: "Febrero",    ruta: "/febrero",      activo: true },
+    { nombre: "Marzo",      ruta: "/marzo",        activo: true },
+    { nombre: "Abril",      ruta: "/abril",        activo: true },
+    { nombre: "Mayo",       ruta: "/mayo",         activo: true },
+    { nombre: "Junio",      ruta: "/junio",        activo: true },
+    { nombre: "Julio",      ruta: "/julio",        activo: true },
+    { nombre: "Agosto",     ruta: "/agosto",       activo: true },
+    { nombre: "Septiembre", ruta: "/septiembre",   activo: true },
+    { nombre: "Octubre",    ruta: "/octubre",      activo: true },
     { nombre: "Noviembre",  ruta: "/noviembre",    activo: true },
     { nombre: "Diciembre",  ruta: "/diciembre",    activo: true },
   ];
@@ -20,12 +19,12 @@ export default function MesNav() {
     <nav style={{ backgroundColor: "#F9FAFB", borderBottom: "1px solid #E5E7EB", padding: "28px 0" }}>
       <div style={{ maxWidth: "1152px", margin: "0 auto", padding: "0 24px" }}>
         <h2 style={{ fontSize: "20px", fontWeight: "bold", color: "#6B7280", marginBottom: "20px" }}>
-          📅Reportes mes a mes en 2026
+          📅 Reportes mes a mes en 2026
         </h2>
         <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(6, 1fr)",
-          gap: "12px",
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "10px",
         }}>
           {meses.map((mes) => (
             <a
@@ -33,7 +32,7 @@ export default function MesNav() {
               href={mes.activo ? (mes.ruta ?? undefined) : undefined}
               onClick={(e) => { if (!mes.activo) e.preventDefault(); }}
               style={{
-                display: "block",
+                flex: "1 1 120px",
                 textAlign: "center",
                 padding: "10px 8px",
                 borderRadius: "8px",
