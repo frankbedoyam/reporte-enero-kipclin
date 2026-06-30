@@ -7,13 +7,13 @@ export default function MesNav() {
     { nombre: "Marzo",      ruta: "/marzo",    activo: true },
     { nombre: "Abril",      ruta: "/abril",    activo: true },
     { nombre: "Mayo",       ruta: "/mayo",    activo: true },
-    { nombre: "Junio",      ruta: "/junio",    activo: false },
-    { nombre: "Julio",      ruta: "/julio",    activo: false },
-    { nombre: "Agosto",     ruta: "/agosto",    activo: false },
-    { nombre: "Septiembre", ruta: "/septiembre",    activo: false },
-    { nombre: "Octubre",    ruta: "/octubre",    activo: false },
-    { nombre: "Noviembre",  ruta: "/noviembre",    activo: false },
-    { nombre: "Diciembre",  ruta: "/diciembre",    activo: false },
+    { nombre: "Junio",      ruta: "/junio",    activo: true },
+    { nombre: "Julio",      ruta: "/julio",    activo: true },
+    { nombre: "Agosto",     ruta: "/agosto",    activo: true },
+    { nombre: "Septiembre", ruta: "/septiembre",    activo: true },
+    { nombre: "Octubre",    ruta: "/octubre",    activo: true },
+    { nombre: "Noviembre",  ruta: "/noviembre",    activo: true },
+    { nombre: "Diciembre",  ruta: "/diciembre",    activo: true },
   ];
 
   return (

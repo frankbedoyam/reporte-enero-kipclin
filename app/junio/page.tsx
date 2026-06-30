@@ -223,7 +223,7 @@ function Section({
           <img
             src={imagen}
             alt={"Imagen " + title}
-            style={{ width: "100%", height: "auto", borderRadius: "6px" }}
+            style={{ width: "50%", height: "auto", borderRadius: "6px" }}
           />
         </div>
       )}
