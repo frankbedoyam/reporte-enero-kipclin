@@ -67,7 +67,7 @@ const data: ReportItem[] = [
     tema: "SEO TÉCNICO",
     actividad: "Score Ahrefs llega a 98.",
     resultado: "Reporte de avance.",
-    kpi: "98% de score en Site Health",
+    kpi: "93% de score en Site Health",
   },
 
   // BLOG
@@ -244,6 +244,13 @@ const data: ReportItem[] = [
     kpi: "Cumplida",
   },
   {
+    fecha: "15 de julio",
+    tema: "REUNIONES",
+    actividad: "Reunión técnica con José 8:00 am",
+    resultado: "Se revisaron juntos los errores de Google Analytics y se concluyó que el origen estaba en Merchant Center.",
+    kpi: "Diagnóstico confirmado",
+  },
+  {
     fecha: "22 de julio",
     tema: "REUNIONES",
     actividad: "Seguimiento con María Botero 5:30 am",
@@ -256,6 +263,13 @@ const data: ReportItem[] = [
     actividad: "Seguimiento con María Botero 5:30 am",
     resultado: "Reuniones semanales",
     kpi: "Cumplida",
+  },
+  {
+    fecha: "29 de julio",
+    tema: "REUNIONES",
+    actividad: "Reunión técnica con José 8:00 am",
+    resultado: "Se actualizó el archivo compartido con Merchant Center, visible luego en Shopping, quedando resueltas las estadísticas de las campañas SEM y SEO.",
+    kpi: "Estadísticas de campañas resueltas",
   },
 
   // REPORTES
