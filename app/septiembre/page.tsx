@@ -219,7 +219,7 @@ const data: ReportItem[] = [
   {
     fecha: "9 de septiembre",
     tema: "REUNIONES",
-    actividad: "Reunión Mercadeo y Dirección Técnica 8:00 am"
+    actividad: "Reunión Mercadeo y Dirección Técnica 8:00 am",
     resultado: "Seguimiento a los hallazgos técnicos enviados a José el 8 de septiembre (errores 4xx y 5xx, URL canónicas huérfanas y datos estructurados) y a la propuesta de ampliación del schema de producto.",
     kpi: "Seguimiento realizado",
   },
