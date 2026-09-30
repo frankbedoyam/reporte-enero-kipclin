@@ -78,7 +78,7 @@ const data: ReportItem[] = [
     kpi: "95% de metadescripciones corregidas",
   },
   {
-    fecha: "23 de septiembre",
+    fecha: "25 de septiembre",
     tema: "SEO TÉCNICO",
     actividad: "Hallazgo en el contenido de amonio cuaternario.",
     resultado: "La ficha técnica en PDF es la segunda página del sitio en clics (1.420), después del inicio. Los artículos del blog sobre el tema bajaron de 80 a 107 clics semanales en julio a entre 20 y 36 desde agosto, lo que coincide con el cambio de URL del artículo principal sin redirección. También se detectó un artículo publicado bajo dos URL. Ambos casos quedaron escalados a José.",
@@ -129,7 +129,7 @@ const data: ReportItem[] = [
     kpi: "259 hits (Joomla)",
   },
   {
-    fecha: "15 de septiembre",
+    fecha: "17 de septiembre",
     tema: "SEO DE CONTENIDOS",
     actividad: "Reduce el consumo de jabón, papel higiénico y servilletas en tu restaurante",
     resultado: "Artículo publicado con imágenes con ALT, keywords, links a productos, interlinking, H1, H2, índice, tabla, preguntas frecuentes y módulo de productos",
@@ -143,14 +143,14 @@ const data: ReportItem[] = [
     kpi: "213 hits (Joomla)",
   },
   {
-    fecha: "21 de septiembre",
+    fecha: "25 de septiembre",
     tema: "SEO DE CONTENIDOS",
     actividad: "Cómo preparar tu piscina para la semana de receso con nuestros productos",
     resultado: "Artículo para hoteles, programado alrededor del Día Mundial del Turismo, con imágenes con ALT, keywords, links a productos, interlinking y módulo de productos",
     kpi: "93 hits (Joomla)",
   },
   {
-    fecha: "26 de septiembre",
+    fecha: "29 de septiembre",
     tema: "SEO DE CONTENIDOS",
     actividad: "Semana de receso en Colombia: restaurantes de Medellín y el Oriente listos para recibir a las familias",
     resultado: "Artículo de cierre de la campaña, con enfoque regional, publicado con la estructura estándar del blog y módulo de productos",
@@ -197,7 +197,7 @@ const data: ReportItem[] = [
     fecha: "21 y 22 de septiembre",
     tema: "ZOHO",
     actividad: "Bloqueos en la integración de WhatsApp y SMS.",
-    resultado: "El número asignado por Meta resultó ser de prueba, y la cuenta de Facebook de CC KipClin tiene una restricción activa desde el 30 de abril que bloquea integraciones. En Twilio, el cambio de representación legal de Kipclin obliga a esperar el documento actualizado de Cámara de Comercio para retomar la verificación. Se formalizó por correo con César Rueda la solicitud de una línea virtual dedicada para WhatsApp.",
+    resultado: "El número asignado por Meta era de prueba, y la cuenta de Facebook de CC KipClin tiene una restricción activa desde el 30 de abril que bloquea integraciones. En Twilio, el cambio de representación legal de Kipclin obliga a esperar el documento actualizado de Cámara de Comercio para retomar la verificación. Se formalizó por correo con César Rueda la solicitud de una línea virtual dedicada para WhatsApp.",
     kpi: "Bloqueos documentados",
   },
   {
@@ -219,7 +219,7 @@ const data: ReportItem[] = [
   {
     fecha: "9 de septiembre",
     tema: "REUNIONES",
-    actividad: "Reunión Mercadeo y Dirección Técnica 8:00 am (Sara, José y Tita)",
+    actividad: "Reunión Mercadeo y Dirección Técnica 8:00 am"
     resultado: "Seguimiento a los hallazgos técnicos enviados a José el 8 de septiembre (errores 4xx y 5xx, URL canónicas huérfanas y datos estructurados) y a la propuesta de ampliación del schema de producto.",
     kpi: "Seguimiento realizado",
   },
@@ -247,8 +247,15 @@ const data: ReportItem[] = [
   {
     fecha: "23 de septiembre",
     tema: "REUNIONES",
-    actividad: "Reunión Mercadeo y Dirección Técnica 8:00 am (Sara, José y Tita)",
+    actividad: "Reunión Mercadeo y Dirección Técnica 8:00 am",
     resultado: "Revisión de los casos escalados a José: redirección de las URL antiguas de amonio cuaternario, artículo publicado bajo dos URL y validación de los 275 errores de servidor del incidente de junio.",
+    kpi: "Seguimiento realizado",
+  },
+  {
+    fecha: "30 de septiembre",
+    tema: "REUNIONES",
+    actividad: "Reunión Seguimiento con María 5:30 am",
+    resultado: "Reporte mensual y presentación de resultados. Además de pensientes de backlinsk y Zoho.",
     kpi: "Seguimiento realizado",
   },
 
