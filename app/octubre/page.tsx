@@ -16,8 +16,8 @@ type ReportItem = {
 
 // ─── Indicadores destacados del mes (tarjetas superiores) ─────
 const destacados = [
-  { valor: "9", etiqueta: "artículos publicados en el blog (1 más programado para el 29 oct)" },
-  { valor: "2.091", etiqueta: "hits acumulados en Joomla (corte 27 oct)" },
+  { valor: "10", etiqueta: "artículos publicados en el blog" },
+  { valor: "2.111", etiqueta: "hits acumulados en Joomla (corte 30 oct)" },
   { valor: "80", etiqueta: "fichas de producto renovadas (20 más listas para cargar)" },
   { valor: "1.474 → 1.958", etiqueta: "tráfico orgánico estimado en Ahrefs (4 al 26 oct, +33%)" },
   { valor: "164 → 200", etiqueta: "keywords en el top 3 de Google (19 al 26 oct)" },
@@ -190,38 +190,61 @@ const data: ReportItem[] = [
     kpi: "15 hits (Joomla, recién publicado)",
   },
   {
+    fecha: "28 de octubre",
+    tema: "SEO DE CONTENIDOS",
+    actividad: "Día del Ahorro: toallas de papel y otras formas de gastar menos en tu negocio",
+    resultado: "Artículo publicado antes del Día del Ahorro (31 de octubre) en la categoría Cuidado del medio ambiente del blog, sobre consumo de agua, detergente, jabón y toallas de papel. Keyword: dispensador de toallas de papel (400 búsquedas/mes)",
+    kpi: "20 hits (Joomla, recién publicado)",
+  },
+  {
     fecha: "29 de octubre",
     tema: "SEO DE CONTENIDOS",
-    actividad: "Día del Ahorro: toallas de papel y ahorro de insumos en el negocio",
-    resultado: "Artículo redactado y entregado el 21 de octubre, programado en la víspera del Día del Ahorro (31 de octubre), sobre consumo de agua, detergente, jabón y toallas de papel. Keyword: dispensador de toallas de papel (400 búsquedas/mes)",
-    kpi: "Programado",
+    actividad: "Investigación de búsquedas en Google para la producción e inspiración de contenidos en redes sociales, a solicitud de María (solicitada y entregada el mismo día).",
+    resultado: "Se revisaron cerca de 260 búsquedas en Ahrefs (Colombia): las que hoy llevan tráfico a Kipclin y las del catálogo que aún no se aprovechan. El documento reúne las 20 búsquedas de mayor volumen (guantes de nitrilo 23.000 y balde 10.000 encabezan la lista y Kipclin no aparece en ninguna), las búsquedas por categoría con su página de destino para el enlace en la biografía o en historias, 19 preguntas que la gente hace (cómo blanquear la ropa blanca 1.300, cómo quitar la grasa de la ropa 800), las marcas que se buscan por nombre (Frotex 7.400, Task 2.000) y cinco pilares de contenido con ejemplos de gancho: La mancha de la semana, Química sin miedo, La herramienta correcta, Negocio impecable y Marcas que ya conoces.",
+    links: [
+      { texto: "Ver documento: Búsquedas para redes Kipclin", url: "https://docs.google.com/document/d/1FRt3QZvPmOxoitOku2aCXaiX2ljmJVh9aDm5PY1r_TI/edit?usp=drive_link" },
+    ],
+    kpi: "5 pilares para redes",
+  },
+  {
+    fecha: "29 y 30 de octubre",
+    tema: "SEO DE CONTENIDOS",
+    actividad: "Planeación de los artículos de noviembre: investigación, presentación y ajustes con datos de Ahrefs, GA4 y Search Console.",
+    resultado: "Calendario de 10 artículos los martes y jueves, más tres fechas especiales (30 de octubre, 6 y 11 de noviembre), con el jueves 19 libre para actualizaciones. Se contrastaron 15 fechas Fenalco con su búsqueda real (Viernes Negro 15.237 en noviembre de 2025, Día del Administrador de Empresas 8.308, Día del Psicólogo 6.110) y se aprovechan los puentes festivos para piscinas y turismo. Las decisiones se apoyan en GA4 (transacciones, unidades y páginas orgánicas de octubre a diciembre de 2025) y en Search Console (noviembre frente a octubre de 2025). Guantes de nitrilo (23.000 búsquedas, dificultad 0) es la keyword de mayor volumen del análisis. Se priorizaron además 6 artículos existentes para actualizar, entre ellos hipoclorito, cloro y lejía, la mayor oportunidad de CTR del sitio.",
+    links: [
+      { texto: "Ver calendario de contenidos de noviembre", url: "https://docs.google.com/spreadsheets/d/1CyQrZLN1j3DKxgAoB9G8QZrhf5Mj5Xx_9cOZqjSKrH8/edit?usp=sharing" },
+      { texto: "Reporte de Search Console: rendimiento en búsqueda", url: "https://docs.google.com/spreadsheets/d/1_Boe5I55UFU5FBtwzKQu6p7LDpazP5BvxunEH3uI--E/edit?usp=drive_link" },
+      { texto: "Reporte de GA4: productos", url: "https://docs.google.com/spreadsheets/d/1BMidDSCHmz7pSqidq75J7sGbzidgbTSRaDK48v12l-w/edit?usp=drive_link" },
+      { texto: "Reporte de GA4: páginas orgánicas", url: "https://docs.google.com/spreadsheets/d/1o_sy7IQVBKdWu9lFD6Nn7c3r6Rva5-Ov9ESnH_2DDiY/edit?usp=drive_link" },
+    ],
+    kpi: "10 artículos planeados",
   },
 
-  // REPORTE ANUAL SEO
+  // GERENCIA
   {
     fecha: "14 de octubre",
-    tema: "REPORTE ANUAL SEO",
+    tema: "GERENCIA",
     actividad: "Dos reuniones con Tita (8:00 am y 11:45 am, 1 hora cada una) para preparar la presentación de un año de resultados SEO.",
     resultado: "Barrido de todo el año: indicadores, logros, incidentes técnicos y pendientes. De esta revisión salió también la propuesta para depurar las URL basura del ataque de junio.",
     kpi: "2 horas",
   },
   {
     fecha: "14 y 15 de octubre",
-    tema: "REPORTE ANUAL SEO",
-    actividad: "Presentación \"SEO Kipclin: un año de resultados\" para REPORTE ANUAL SEO (septiembre 2025 a octubre 2026).",
-    resultado: "19 diapositivas con datos de Search Console, Ahrefs, GA4 y Core Web Vitals: la posición media en Google pasó de 10,4 a 7,8, las keywords en posiciones 4 a 10 crecieron 55% y las keywords del blog en el top 10 casi se duplicaron (431 a 846). Incluye 923 correcciones de metadatos de producto, 46 subcategorías reescritas, la comparación de citas en IA frente a 6 competidores, una diapositiva de lo que no se presenta como logro y el plan 2027. María la aprobó y sugirió agregar lo que se necesita de REPORTE ANUAL SEO para seguir mejorando.",
+    tema: "GERENCIA",
+    actividad: "Presentación \"SEO Kipclin: un año de resultados\" para Gerencia (septiembre 2025 a octubre 2026).",
+    resultado: "19 diapositivas con datos de Search Console, Ahrefs, GA4 y Core Web Vitals: la posición media en Google pasó de 10,4 a 7,8, las keywords en posiciones 4 a 10 crecieron 55% y las keywords del blog en el top 10 casi se duplicaron (431 a 846). Incluye 923 correcciones de metadatos de producto, 46 subcategorías reescritas, la comparación de citas en IA frente a 6 competidores, una diapositiva de lo que no se presenta como logro y el plan 2027. María la aprobó y sugirió agregar lo que se necesita de Gerencia para seguir mejorando.",
     kpi: "19 diapositivas",
   },
   {
     fecha: "21 de octubre",
-    tema: "REPORTE ANUAL SEO",
+    tema: "GERENCIA",
     actividad: "Reunión con Tita (5:30 am, 1 hora) para definir el cuadro de cifras mes a mes.",
     resultado: "Se acordaron las fuentes y los indicadores del cuadro de respaldo de la presentación.",
     kpi: "1 hora",
   },
   {
     fecha: "21 al 26 de octubre",
-    tema: "REPORTE ANUAL SEO",
+    tema: "GERENCIA",
     actividad: "Cuadro de cifras mes a mes en Excel, de septiembre de 2025 a octubre de 2026.",
     resultado: "11 hojas con datos, fórmulas y gráficos: Search Console, Ahrefs, keywords del blog, publicaciones del blog (60 artículos), canales de GA4, categorías, salud técnica, Core Web Vitals y búsquedas de marca. El 26 de octubre se agregó la participación del orgánico en las ventas web (GA4): bajó de 21% en septiembre de 2025 a 3,2% en agosto de 2026 y se recuperó a 9,0% en septiembre, cifra que coincide con la reportada por Sandra (+176% de agosto a septiembre). Meta 2027 propuesta: 15%.",
     kpi: "11 hojas de cifras",
@@ -348,7 +371,7 @@ const data: ReportItem[] = [
     fecha: "14 de octubre",
     tema: "REUNIONES",
     actividad: "Reunión SEO con María 5:30 am",
-    resultado: "Estado del sitio tras la caída, posiciones de la semana y avance de la presentación para REPORTE ANUAL SEO. Se aclaró después que los descuentos vistos en la web eran el descuento de empleados, visible solo al iniciar sesión.",
+    resultado: "Estado del sitio tras la caída, posiciones de la semana y avance de la presentación para Gerencia. Se aclaró después que los descuentos vistos en la web eran el descuento de empleados, visible solo al iniciar sesión.",
     kpi: "Seguimiento realizado",
   },
   {
@@ -417,7 +440,7 @@ const data: ReportItem[] = [
     kpi: "Completado",
   },
   {
-    fecha: "27 de octubre",
+    fecha: "27 y 30 de octubre",
     tema: "REPORTES",
     actividad: "Generación del reporte de actividades de octubre",
     resultado: "Seguimiento a actividades",
@@ -429,9 +452,9 @@ const data: ReportItem[] = [
 // Espacios para imagen: subir los archivos a public/octubre/
 const secciones = [
   { tema: "SEO TÉCNICO",            title: "SEO TÉCNICO",            imagen: "/octubre/ahrefs.png", alt: "Captura de Ahrefs Site Audit, octubre 2026" },
-  { tema: "FICHAS DE PRODUCTO",     title: "FICHAS DE PRODUCTO",     imagen: undefined,             alt: "" },
+  { tema: "FICHAS DE PRODUCTO",     title: "FICHAS DE PRODUCTO",     imagen: "/octubre/fichas.png", alt: "Fichas renovadas que subieron y bajaron de posición en Google, octubre 2026" },
   { tema: "SEO DE CONTENIDOS",      title: "SEO DE CONTENIDOS",      imagen: "/octubre/joomla.png", alt: "Captura del backend de Joomla con los artículos del blog de octubre" },
-  { tema: "REPORTE ANUAL SEO",               title: "INFORMES PARA REPORTE ANUAL SEO", imagen: undefined,             alt: "" },
+  { tema: "GERENCIA",               title: "INFORMES PARA GERENCIA", imagen: undefined,             alt: "" },
   { tema: "SEGUIMIENTO Y MEDICIÓN", title: "SEGUIMIENTO Y MEDICIÓN", imagen: undefined,             alt: "" },
   { tema: "ZOHO",                   title: "ZOHO Y CAMPAÑAS",        imagen: "/octubre/zoho.png",   alt: "Captura de Zoho Marketing Automation, automatizaciones" },
   { tema: "REUNIONES",              title: "REUNIONES",              imagen: undefined,             alt: "" },
@@ -660,7 +683,7 @@ export default function Page() {
               Reporte Octubre 2026 | Kipclin
             </h1>
             <p style={{ fontSize: "16px", margin: 0 }}>
-              Seguimiento técnico, editorial y de automatización del sitio web. Incluye SEO técnico, renovación de fichas de producto, SEO de contenidos (blog), informes para REPORTE ANUAL SEO, seguimiento en Ahrefs, Search Console y Analytics, Zoho Marketing Automation, reuniones y reportes del mes.
+              Seguimiento técnico, editorial y de automatización del sitio web. Incluye SEO técnico, renovación de fichas de producto, SEO de contenidos (blog), informes para Gerencia, seguimiento en Ahrefs, Search Console y Analytics, Zoho Marketing Automation, reuniones y reportes del mes.
             </p>
           </div>
 
